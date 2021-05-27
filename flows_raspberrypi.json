@@ -19611,7 +19611,7 @@
         "name": "Widget to display version / Publish date",
         "order": 5,
         "width": 12,
-        "height": 6,
+        "height": 7,
         "format": "<html>\n\n<head>\n\n<style>\n\n.flex-container {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 10px;\n}\n\n.flex-item-left {\n  flex: 50%;\n}\n\n.flex-item-right {\n  flex:50%;\n}\n\n</style>\n\n</head>\n\n<body>\n\n<div class=\"flex-container\"> \n    <div class=\"flex-item-left\">\n        <h3 style=\"font-weight: bold\">Available version(s)</h3>\n        <p ng-repeat=\"x in msg.payload\"><a href={{x.URL_Download}} target=\"_blank\" span style=\"color:rgb(246,86,10); font-size:16px\">{{x.Version}}</a></p>\n    </div>\n    \n    <div class=\"flex-item-right\">\n        <h3 style=\"font-weight: bold; text-align: right\">Publish date</h3>\n        <p ng-repeat=\"x in msg.payload\" style=\"text-align: right;\">{{x.Published_Date}}</p>\n    </div>\n</div>\n\n</body>\n\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -19633,7 +19633,7 @@
         "place": "SELECT A VERSION",
         "group": "dc5b6f65.657e5",
         "order": 6,
-        "width": 6,
+        "width": 12,
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -19723,7 +19723,7 @@
         "name": "",
         "group": "dc5b6f65.657e5",
         "order": 7,
-        "width": 6,
+        "width": 12,
         "height": 1,
         "passthru": false,
         "label": "Confirm update",
@@ -20014,26 +20014,6 @@
         "wires": [
             [],
             [],
-            []
-        ]
-    },
-    {
-        "id": "be5c408e.16822",
-        "type": "ui_template",
-        "z": "fea8a30b.1598d",
-        "group": "dc5b6f65.657e5",
-        "name": "Warning",
-        "order": 8,
-        "width": 12,
-        "height": 2,
-        "format": "<html>\n    \n<head>\n    \n<style>\np.a {\n  font-style: italic;\n  font-weight: 600;\n  font-size: medium;\n  text-align: center;\n}\n</style>\n\n</head>\n\n<body>\n\n<p class=\"a\">Please be careful when downgrading, the update manager has been introduced in version 1.1.0, so downgrading furhter down will result in you having to update back manually.</p>\n\n</body>\n\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 400,
-        "y": 640,
-        "wires": [
             []
         ]
     },
