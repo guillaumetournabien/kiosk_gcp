@@ -21,7 +21,7 @@
         "info": ""
     },
     {
-        "id": "fc51a28d.3390f",
+        "id": "fea8a30b.1598d",
         "type": "tab",
         "label": "UPDATE MANAGER",
         "disabled": false,
@@ -16198,7 +16198,7 @@
         "type": "function",
         "z": "eb8df6c6.74f658",
         "name": "Initialisation Variable",
-        "func": "// Declaration of the generic structure\n//\nvar SW_VERSION = {\n        \"NAME\":\"SW_VERSION\",\n        \"VERSION\":\"1.0.1\"\n};\nvar SERIAL_NUMBER = {\n    \"NAME\":\"SERIAL_NUMBER\",\n    \"SERIAL_NUMBER\":\"1\"\n};\n\nvar OUT_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"I_RAW_ADC\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,\n    \"CONF_I_ABSOLUTE_LIMIT\":0,\n    \"CONF_I_ABSOLUTE_CONTINUOUS_LIMIT\":0,\n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24.1,\n    \"CONF_OVERTEMP\":true,\n    \"CONF_CAL_CURRENT_COEF_A\":1.1,\n    \"CONF_CAL_CURRENT_COEF_B\":0.1,\n    \"CONF_CAL_TEMP_COEF_A\":1.1,\n    \"CONF_CAL_TEMP_COEF_B\":0.1,\n    \"LOGGING\":false\n};\nvar PEF_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"I_RAW_ADC\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,\n    \"DRIVER_TJ\":0,\n    \"DRIVER_NTC\":0,\n    \"GLB\":0,\n    \"SR1\":0,\n    \"VDS\":0,\n    \"HSHT_SAR\":0,\n    \"CONF_I_ABSOLUTE_LIMIT\":0,\n    \"CONF_I_ABSOLUTE_CONTINUOUS_LIMIT\":0,\n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"CONF_CAL_CURRENT_COEF_A\":1,\n    \"CONF_CAL_CURRENT_COEF_B\":0,\n    \"CONF_CAL_TEMP_COEF_A\":1,\n    \"CONF_CAL_TEMP_COEF_B\":0,\n    \"REG_COMMAND\":0,\n    \"REG_INPUT1\":0,\n    \"REG_INPUT2\":0,\n    \"REG_INPUT3\":0,\n    \"REG_STATUS\":0,\n    \"REG_DATA1\":0,\n    \"REG_DATA2\":0,\n    \"REG_DATA3\":0,\n    \"LOGGING\":false\n};\nvar HB_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,    \n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"LOGGING\":false\n};\nvar IO_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"ANA\":0,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,    \n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"LOGGING\":false\n};\nvar ANA_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"VOLTAGE\":0,\n    \"CONF_CAL_COEF_A\":1,\n    \"CONF_CAL_COEF_B\":0,\n    \"TEMP\":0\n};\nvar CAN_TEMPLATE={\n    \"ENABLE\":true,\n    \"SPEED\":500,\n    \"LOAD\":0\n}\nvar PRODUCT_INFO_TEMPLATE={\n    \"NAME\":\"PRODUCT_INFO\",\n    \"PRODUCT\":\"GCP\",\n    \"SERIAL_NUMBER\":0,\n    \"ALIVE_COUNTER\":0,\n    \"STATE_MODE\":0,\n    \"SW_VERS_DAY\":0,\n    \"SW_VERS_MONTH\":0,\n    \"SW_VERS_YEAR\":0,\n    \"SW_VERS_MAJOR\":0,\n    \"SW_VERS_MINOR\":0,\n    \"SW_VERS_PATCH\":0\n}\n\nglobal.set('REQUEST_UPDATE', false);\n\nglobal.set('SW_VERSION', SW_VERSION);\nglobal.set('SERIAL_NUMBER', SERIAL_NUMBER);\nglobal.set('PRODUCT_INFO', PRODUCT_INFO_TEMPLATE);\n\nvar CAN1 = {\"NAME\":\"CAN1\", ...CAN_TEMPLATE};\nvar CAN2 = {\"NAME\":\"CAN2\", ...CAN_TEMPLATE};\nvar CAN3 = {\"NAME\":\"CAN3\", ...CAN_TEMPLATE};\n\nglobal.set('CAN1',CAN1);\nglobal.set('CAN2',CAN2);\nglobal.set('CAN3',CAN3);\n\nglobal.set('ANA_IN01',ANA_TEMPLATE);\nglobal.set('ANA_IN02',ANA_TEMPLATE);\nglobal.set('ANA_IN03',ANA_TEMPLATE);\nglobal.set('ANA_IN04',ANA_TEMPLATE);\nglobal.set('ANA_IN05',ANA_TEMPLATE);\nglobal.set('ANA_IN06',ANA_TEMPLATE);\nglobal.set('ANA_IN07',ANA_TEMPLATE);\nglobal.set('ANA_IN08',ANA_TEMPLATE);\nglobal.set('ANA_IN09',ANA_TEMPLATE);\nglobal.set('ANA_IN10',ANA_TEMPLATE);\nglobal.set('ANA_IN11',ANA_TEMPLATE);\nglobal.set('ANA_ACC_SNSR1',ANA_TEMPLATE);\nglobal.set('ANA_ACC_SNSR2',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30A',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30B',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30_PROTECT',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30A_PWR',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30B_PWR',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_5V_SW',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3_SW',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3_BRIDGE',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_12V',ANA_TEMPLATE);\nglobal.set('INTERNAL_ADC1',ANA_TEMPLATE);\nglobal.set('INTERNAL_ADC2',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP1',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP2',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP3',ANA_TEMPLATE);\n\nglobal.set('IO1',IO_TEMPLATE);\nglobal.set('IO2',IO_TEMPLATE);\nglobal.set('IO3',IO_TEMPLATE);\nglobal.set('IO4',IO_TEMPLATE);\nglobal.set('IO5',IO_TEMPLATE);\nglobal.set('IO6',IO_TEMPLATE);\nglobal.set('IO7',IO_TEMPLATE);\nglobal.set('IO8',IO_TEMPLATE);\nglobal.set('IO9',IO_TEMPLATE);\nglobal.set('IO10',IO_TEMPLATE);\nglobal.set('IO11',IO_TEMPLATE);\nglobal.set('IO12',IO_TEMPLATE);\nglobal.set('OUT1',OUT_TEMPLATE);\nglobal.set('OUT2',OUT_TEMPLATE);\nglobal.set('OUT3',OUT_TEMPLATE);\nglobal.set('OUT4',OUT_TEMPLATE);\nglobal.set('OUT5',OUT_TEMPLATE);\nglobal.set('OUT6',OUT_TEMPLATE);\nglobal.set('OUT7',OUT_TEMPLATE);\nglobal.set('OUT8',OUT_TEMPLATE);\nglobal.set('OUT9',OUT_TEMPLATE);\nglobal.set('OUT10',OUT_TEMPLATE);\nglobal.set('OUT11',OUT_TEMPLATE);\nglobal.set('OUT12',OUT_TEMPLATE);\nglobal.set('OUT13',OUT_TEMPLATE);\nglobal.set('OUT14',OUT_TEMPLATE);\nglobal.set('OUT15',OUT_TEMPLATE);\nglobal.set('OUT16',OUT_TEMPLATE);\nglobal.set('OUT17',OUT_TEMPLATE);\nglobal.set('OUT18',OUT_TEMPLATE);\nglobal.set('OUT19',OUT_TEMPLATE);\nglobal.set('OUT20',OUT_TEMPLATE);\nglobal.set('OUT21',OUT_TEMPLATE);\nglobal.set('OUT22',OUT_TEMPLATE);\nglobal.set('OUT23',OUT_TEMPLATE);\nglobal.set('OUT24',OUT_TEMPLATE);\nglobal.set('OUT25',OUT_TEMPLATE);\nglobal.set('OUT26',OUT_TEMPLATE);\nglobal.set('OUT27',OUT_TEMPLATE);\nglobal.set('OUT28',OUT_TEMPLATE);\nglobal.set('OUT29',OUT_TEMPLATE);\nglobal.set('OUT30',OUT_TEMPLATE);\nglobal.set('OUT31',OUT_TEMPLATE);\nglobal.set('OUT32',OUT_TEMPLATE);\nglobal.set('OUT33',OUT_TEMPLATE);\nglobal.set('OUT34',OUT_TEMPLATE);\nglobal.set('OUT35',OUT_TEMPLATE);\nglobal.set('OUT36',OUT_TEMPLATE);\nglobal.set('OUT37',OUT_TEMPLATE);\nglobal.set('OUT38',OUT_TEMPLATE);\nglobal.set('OUT39',OUT_TEMPLATE);\nglobal.set('OUT40',OUT_TEMPLATE);\nglobal.set('OUT41',OUT_TEMPLATE);\nglobal.set('OUT42',OUT_TEMPLATE);\nglobal.set('OUT43',OUT_TEMPLATE);\nglobal.set('OUT44',OUT_TEMPLATE);\nglobal.set('OUT45',OUT_TEMPLATE);\nglobal.set('OUT46',OUT_TEMPLATE);\nglobal.set('OUT47',OUT_TEMPLATE);\nglobal.set('OUT48',OUT_TEMPLATE);\n\nglobal.set('PEF1',PEF_TEMPLATE);\nglobal.set('PEF2',PEF_TEMPLATE);\nglobal.set('PEF3',PEF_TEMPLATE);\nglobal.set('PEF4',PEF_TEMPLATE);\nglobal.set('PEF5',PEF_TEMPLATE);\nglobal.set('PEF6',PEF_TEMPLATE);\nglobal.set('PEF7',PEF_TEMPLATE);\nglobal.set('PEF8',PEF_TEMPLATE);\nglobal.set('HB1',HB_TEMPLATE);\nglobal.set('HB2',HB_TEMPLATE);\nglobal.set('HB3',HB_TEMPLATE);\nglobal.set('HB4',HB_TEMPLATE);\nglobal.set('HB5',HB_TEMPLATE);\nglobal.set('HB6',HB_TEMPLATE);\nglobal.set('HB7',HB_TEMPLATE);\nglobal.set('HB8',HB_TEMPLATE);\n\nglobal.set('CAN0_LOGGER',[]);\nglobal.set('MQTT_ENABLE', false);\n\nglobal.set('NODE_TLS_REJECT_UNAUTHORIZED',0);\n\nreturn msg;",
+        "func": "// Declaration of the generic structure\n//\nvar SW_VERSION = {\n        \"NAME\":\"SW_VERSION\",\n        \"VERSION\":\"1.0.2\"\n};\nvar SERIAL_NUMBER = {\n    \"NAME\":\"SERIAL_NUMBER\",\n    \"SERIAL_NUMBER\":\"1\"\n};\n\nvar OUT_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"I_RAW_ADC\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,\n    \"CONF_I_ABSOLUTE_LIMIT\":0,\n    \"CONF_I_ABSOLUTE_CONTINUOUS_LIMIT\":0,\n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24.1,\n    \"CONF_OVERTEMP\":true,\n    \"CONF_CAL_CURRENT_COEF_A\":1.1,\n    \"CONF_CAL_CURRENT_COEF_B\":0.1,\n    \"CONF_CAL_TEMP_COEF_A\":1.1,\n    \"CONF_CAL_TEMP_COEF_B\":0.1,\n    \"LOGGING\":false\n};\nvar PEF_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"I_RAW_ADC\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,\n    \"DRIVER_TJ\":0,\n    \"DRIVER_NTC\":0,\n    \"GLB\":0,\n    \"SR1\":0,\n    \"VDS\":0,\n    \"HSHT_SAR\":0,\n    \"CONF_I_ABSOLUTE_LIMIT\":0,\n    \"CONF_I_ABSOLUTE_CONTINUOUS_LIMIT\":0,\n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"CONF_CAL_CURRENT_COEF_A\":1,\n    \"CONF_CAL_CURRENT_COEF_B\":0,\n    \"CONF_CAL_TEMP_COEF_A\":1,\n    \"CONF_CAL_TEMP_COEF_B\":0,\n    \"REG_COMMAND\":0,\n    \"REG_INPUT1\":0,\n    \"REG_INPUT2\":0,\n    \"REG_INPUT3\":0,\n    \"REG_STATUS\":0,\n    \"REG_DATA1\":0,\n    \"REG_DATA2\":0,\n    \"REG_DATA3\":0,\n    \"LOGGING\":false\n};\nvar HB_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,    \n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"LOGGING\":false\n};\nvar IO_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"ANA\":0,\n    \"CMD\":false,\n    \"STATE\":false,\n    \"I_AVG\":0,\n    \"I_PEAK\":0,\n    \"OL\":false,\n    \"CC_BAT\":false,\n    \"CC_GND\":false,\n    \"OVERTEMP\":0,\n    \"IN_VOLTAGE\":0,\n    \"OUT_VOLTAGE\":0,\n    \"TEMP\":0,    \n    \"CONF_I_MAX\":10,\n    \"CONF_I_AVG\":3,\n    \"CONF_I_TIME\":0.1,\n    \"CONF_SAFE_STATE\":0,\n    \"CONF_DIAG_OL\":true,\n    \"CONF_DIAG_CC_GND\":true,\n    \"CONF_DIAG_CC_BAT\":true,\n    \"CONF_DIAG_TEMP\":true,\n    \"CONF_UNDERVOLTAGE\":7.5,\n    \"CONF_OVERVOLTAGE\":24,\n    \"CONF_OVERTEMP\":true,\n    \"LOGGING\":false\n};\nvar ANA_TEMPLATE={\n    \"NAME\":\"undefined\",\n    \"DESIGNATION\":\"undefined\",\n    \"ENABLE\":true,\n    \"VOLTAGE\":0,\n    \"CONF_CAL_COEF_A\":1,\n    \"CONF_CAL_COEF_B\":0,\n    \"TEMP\":0\n};\nvar CAN_TEMPLATE={\n    \"ENABLE\":true,\n    \"SPEED\":500,\n    \"LOAD\":0\n}\nvar PRODUCT_INFO_TEMPLATE={\n    \"NAME\":\"PRODUCT_INFO\",\n    \"PRODUCT\":\"GCP\",\n    \"SERIAL_NUMBER\":0,\n    \"ALIVE_COUNTER\":0,\n    \"STATE_MODE\":0,\n    \"SW_VERS_DAY\":0,\n    \"SW_VERS_MONTH\":0,\n    \"SW_VERS_YEAR\":0,\n    \"SW_VERS_MAJOR\":0,\n    \"SW_VERS_MINOR\":0,\n    \"SW_VERS_PATCH\":0\n}\n\nglobal.set('REQUEST_UPDATE', false);\n\nglobal.set('SW_VERSION', SW_VERSION);\nglobal.set('SERIAL_NUMBER', SERIAL_NUMBER);\nglobal.set('PRODUCT_INFO', PRODUCT_INFO_TEMPLATE);\n\nvar CAN1 = {\"NAME\":\"CAN1\", ...CAN_TEMPLATE};\nvar CAN2 = {\"NAME\":\"CAN2\", ...CAN_TEMPLATE};\nvar CAN3 = {\"NAME\":\"CAN3\", ...CAN_TEMPLATE};\n\nglobal.set('CAN1',CAN1);\nglobal.set('CAN2',CAN2);\nglobal.set('CAN3',CAN3);\n\nglobal.set('ANA_IN01',ANA_TEMPLATE);\nglobal.set('ANA_IN02',ANA_TEMPLATE);\nglobal.set('ANA_IN03',ANA_TEMPLATE);\nglobal.set('ANA_IN04',ANA_TEMPLATE);\nglobal.set('ANA_IN05',ANA_TEMPLATE);\nglobal.set('ANA_IN06',ANA_TEMPLATE);\nglobal.set('ANA_IN07',ANA_TEMPLATE);\nglobal.set('ANA_IN08',ANA_TEMPLATE);\nglobal.set('ANA_IN09',ANA_TEMPLATE);\nglobal.set('ANA_IN10',ANA_TEMPLATE);\nglobal.set('ANA_IN11',ANA_TEMPLATE);\nglobal.set('ANA_ACC_SNSR1',ANA_TEMPLATE);\nglobal.set('ANA_ACC_SNSR2',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30A',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30B',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30_PROTECT',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30A_PWR',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_KL30B_PWR',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_5V_SW',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3_SW',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_3V3_BRIDGE',ANA_TEMPLATE);\nglobal.set('INTERNAL_ANA_12V',ANA_TEMPLATE);\nglobal.set('INTERNAL_ADC1',ANA_TEMPLATE);\nglobal.set('INTERNAL_ADC2',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP1',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP2',ANA_TEMPLATE);\nglobal.set('INTERNAL_TEMP3',ANA_TEMPLATE);\n\nglobal.set('IO1',IO_TEMPLATE);\nglobal.set('IO2',IO_TEMPLATE);\nglobal.set('IO3',IO_TEMPLATE);\nglobal.set('IO4',IO_TEMPLATE);\nglobal.set('IO5',IO_TEMPLATE);\nglobal.set('IO6',IO_TEMPLATE);\nglobal.set('IO7',IO_TEMPLATE);\nglobal.set('IO8',IO_TEMPLATE);\nglobal.set('IO9',IO_TEMPLATE);\nglobal.set('IO10',IO_TEMPLATE);\nglobal.set('IO11',IO_TEMPLATE);\nglobal.set('IO12',IO_TEMPLATE);\nglobal.set('OUT1',OUT_TEMPLATE);\nglobal.set('OUT2',OUT_TEMPLATE);\nglobal.set('OUT3',OUT_TEMPLATE);\nglobal.set('OUT4',OUT_TEMPLATE);\nglobal.set('OUT5',OUT_TEMPLATE);\nglobal.set('OUT6',OUT_TEMPLATE);\nglobal.set('OUT7',OUT_TEMPLATE);\nglobal.set('OUT8',OUT_TEMPLATE);\nglobal.set('OUT9',OUT_TEMPLATE);\nglobal.set('OUT10',OUT_TEMPLATE);\nglobal.set('OUT11',OUT_TEMPLATE);\nglobal.set('OUT12',OUT_TEMPLATE);\nglobal.set('OUT13',OUT_TEMPLATE);\nglobal.set('OUT14',OUT_TEMPLATE);\nglobal.set('OUT15',OUT_TEMPLATE);\nglobal.set('OUT16',OUT_TEMPLATE);\nglobal.set('OUT17',OUT_TEMPLATE);\nglobal.set('OUT18',OUT_TEMPLATE);\nglobal.set('OUT19',OUT_TEMPLATE);\nglobal.set('OUT20',OUT_TEMPLATE);\nglobal.set('OUT21',OUT_TEMPLATE);\nglobal.set('OUT22',OUT_TEMPLATE);\nglobal.set('OUT23',OUT_TEMPLATE);\nglobal.set('OUT24',OUT_TEMPLATE);\nglobal.set('OUT25',OUT_TEMPLATE);\nglobal.set('OUT26',OUT_TEMPLATE);\nglobal.set('OUT27',OUT_TEMPLATE);\nglobal.set('OUT28',OUT_TEMPLATE);\nglobal.set('OUT29',OUT_TEMPLATE);\nglobal.set('OUT30',OUT_TEMPLATE);\nglobal.set('OUT31',OUT_TEMPLATE);\nglobal.set('OUT32',OUT_TEMPLATE);\nglobal.set('OUT33',OUT_TEMPLATE);\nglobal.set('OUT34',OUT_TEMPLATE);\nglobal.set('OUT35',OUT_TEMPLATE);\nglobal.set('OUT36',OUT_TEMPLATE);\nglobal.set('OUT37',OUT_TEMPLATE);\nglobal.set('OUT38',OUT_TEMPLATE);\nglobal.set('OUT39',OUT_TEMPLATE);\nglobal.set('OUT40',OUT_TEMPLATE);\nglobal.set('OUT41',OUT_TEMPLATE);\nglobal.set('OUT42',OUT_TEMPLATE);\nglobal.set('OUT43',OUT_TEMPLATE);\nglobal.set('OUT44',OUT_TEMPLATE);\nglobal.set('OUT45',OUT_TEMPLATE);\nglobal.set('OUT46',OUT_TEMPLATE);\nglobal.set('OUT47',OUT_TEMPLATE);\nglobal.set('OUT48',OUT_TEMPLATE);\n\nglobal.set('PEF1',PEF_TEMPLATE);\nglobal.set('PEF2',PEF_TEMPLATE);\nglobal.set('PEF3',PEF_TEMPLATE);\nglobal.set('PEF4',PEF_TEMPLATE);\nglobal.set('PEF5',PEF_TEMPLATE);\nglobal.set('PEF6',PEF_TEMPLATE);\nglobal.set('PEF7',PEF_TEMPLATE);\nglobal.set('PEF8',PEF_TEMPLATE);\nglobal.set('HB1',HB_TEMPLATE);\nglobal.set('HB2',HB_TEMPLATE);\nglobal.set('HB3',HB_TEMPLATE);\nglobal.set('HB4',HB_TEMPLATE);\nglobal.set('HB5',HB_TEMPLATE);\nglobal.set('HB6',HB_TEMPLATE);\nglobal.set('HB7',HB_TEMPLATE);\nglobal.set('HB8',HB_TEMPLATE);\n\nglobal.set('CAN0_LOGGER',[]);\nglobal.set('MQTT_ENABLE', false);\n\nglobal.set('NODE_TLS_REJECT_UNAUTHORIZED',0);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19515,9 +19515,9 @@
         ]
     },
     {
-        "id": "3f56f29e.bb797e",
+        "id": "9bf82d6f.ac557",
         "type": "http request",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Fetch releases",
         "method": "GET",
         "ret": "obj",
@@ -19527,19 +19527,18 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 860,
+        "x": 880,
         "y": 220,
         "wires": [
             [
-                "47400ac4.de95b4",
-                "590138d7.2e84a8"
+                "5c82bcd1.f69964"
             ]
         ]
     },
     {
-        "id": "d14119d.192bee8",
+        "id": "afd30595.579fe8",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Set request flag for github",
         "func": "var product = RED.util.cloneMessage(flow.get('Product'));\n\nmsg.headers = {};\nmsg.headers['User-Agent'] = 'request';\nmsg.url = \"https://api.github.com/repos/guillaumetournabien/\" + product + \"/releases\"\nreturn msg;",
         "outputs": 1,
@@ -19547,19 +19546,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 670,
         "y": 220,
         "wires": [
             [
-                "3f56f29e.bb797e",
-                "17dad3dc.80bd3c"
+                "9bf82d6f.ac557"
             ]
         ]
     },
     {
-        "id": "590138d7.2e84a8",
+        "id": "5c82bcd1.f69964",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Extract Version, Changes, Date and URL",
         "func": "var updates = {};\nupdates.payload = [];\n\nmsg.payload.forEach(function(item,index){\n    updates.payload[index] = {\"Version\":item.tag_name, \"Changes\":item.body, \"Published_Date\":item.published_at, \"URL_Download\":item.zipball_url};\n    updates.payload[index].Published_Date = updates.payload[index].Published_Date.slice(0,10);\n    updates.payload[index].Changes = updates.payload[index].Changes.split('*');\n    updates.payload[index].Changes.shift();\n});\n\nflow.set('Updates',updates.payload);\n\nreturn updates;",
         "outputs": 1,
@@ -19567,19 +19565,19 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1160,
         "y": 220,
         "wires": [
             [
-                "d7644895.ae76b8",
-                "cf190be7.cd5678"
+                "2dcdc9ea.f8c166",
+                "5c13e3e5.cdf40c"
             ]
         ]
     },
     {
-        "id": "c4a7d321.a0f91",
+        "id": "845c5eee.96dfc",
         "type": "ui_button",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "group": "dc5b6f65.657e5",
         "order": 4,
@@ -19595,20 +19593,20 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 350,
+        "x": 370,
         "y": 320,
         "wires": [
             [
-                "d14119d.192bee8",
-                "4df2ae4f.bb4ac",
-                "848b7f00.3f543"
+                "afd30595.579fe8",
+                "7ee2a717.c55688",
+                "5eac1573.a1853c"
             ]
         ]
     },
     {
-        "id": "d7644895.ae76b8",
+        "id": "2dcdc9ea.f8c166",
         "type": "ui_template",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "group": "dc5b6f65.657e5",
         "name": "Widget to display version / Publish date",
         "order": 5,
@@ -19619,16 +19617,16 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1500,
+        "x": 1520,
         "y": 220,
         "wires": [
             []
         ]
     },
     {
-        "id": "4f647eba.00753",
+        "id": "e658d29f.abc9e",
         "type": "ui_dropdown",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "label": "Select a version :",
         "tooltip": "",
@@ -19649,18 +19647,18 @@
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1110,
+        "x": 1130,
         "y": 320,
         "wires": [
             [
-                "1ebd3eed.9d0231"
+                "7f587625.c69048"
             ]
         ]
     },
     {
-        "id": "25127b7a.fef004",
+        "id": "131813b2.07c24c",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Send avaible update to dropdown menu",
         "func": "\nvar updates = {};\nupdates.payload = RED.util.cloneMessage(flow.get('Updates'));\nupdates.options = [];\n\nupdates.payload.forEach(function(item,index){\n    updates.options[index] = item.Version;\n});\n\nreturn updates;",
         "outputs": 1,
@@ -19668,18 +19666,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
+        "x": 860,
         "y": 320,
         "wires": [
             [
-                "4f647eba.00753"
+                "e658d29f.abc9e"
             ]
         ]
     },
     {
-        "id": "4df2ae4f.bb4ac",
+        "id": "7ee2a717.c55688",
         "type": "delay",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "pauseType": "delay",
         "timeout": "500",
@@ -19691,18 +19689,18 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 570,
+        "x": 590,
         "y": 320,
         "wires": [
             [
-                "25127b7a.fef004"
+                "131813b2.07c24c"
             ]
         ]
     },
     {
-        "id": "1ebd3eed.9d0231",
+        "id": "7f587625.c69048",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Save selected update version",
         "func": "flow.set('Update_Selected',msg.payload);\nmsg.enabled = true;\nmsg.background = \"rgb(245, 86, 10)\";\n\nreturn msg;",
         "outputs": 1,
@@ -19710,18 +19708,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1390,
         "y": 320,
         "wires": [
             [
-                "c61f5f2a.dbacf"
+                "f20d4be7.7d26d8"
             ]
         ]
     },
     {
-        "id": "c61f5f2a.dbacf",
+        "id": "f20d4be7.7d26d8",
         "type": "ui_button",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "group": "dc5b6f65.657e5",
         "order": 7,
@@ -19737,18 +19735,18 @@
         "payloadType": "str",
         "topic": "Confirm Update",
         "topicType": "str",
-        "x": 400,
+        "x": 420,
         "y": 400,
         "wires": [
             [
-                "e3d67677.052128"
+                "20b4695c.a16fa6"
             ]
         ]
     },
     {
-        "id": "e3d67677.052128",
+        "id": "20b4695c.a16fa6",
         "type": "ui_toast",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -19759,18 +19757,18 @@
         "raw": false,
         "topic": "",
         "name": "Confirm",
-        "x": 580,
+        "x": 600,
         "y": 400,
         "wires": [
             [
-                "7a1248c0.3cd428"
+                "bbab74d2.68d2f8"
             ]
         ]
     },
     {
-        "id": "7a1248c0.3cd428",
+        "id": "bbab74d2.68d2f8",
         "type": "switch",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "If yes",
         "property": "payload",
         "propertyType": "msg",
@@ -19784,18 +19782,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 730,
+        "x": 750,
         "y": 400,
         "wires": [
             [
-                "2abe7f7e.a149d"
+                "58f50689.181728"
             ]
         ]
     },
     {
-        "id": "c34ffeb5.53c9",
+        "id": "4c16d9ae.c6fc28",
         "type": "ui_text",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "group": "dc5b6f65.657e5",
         "order": 2,
         "width": 6,
@@ -19804,14 +19802,14 @@
         "label": "Current dashboard version : ",
         "format": "{{msg.payload.VERSION}}",
         "layout": "row-right",
-        "x": 420,
+        "x": 500,
         "y": 40,
         "wires": []
     },
     {
-        "id": "5717cfdd.3d32c",
+        "id": "50db574f.7c2898",
         "type": "inject",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "props": [
             {
@@ -19829,14 +19827,14 @@
         "y": 40,
         "wires": [
             [
-                "c34ffeb5.53c9"
+                "4c16d9ae.c6fc28"
             ]
         ]
     },
     {
-        "id": "2abe7f7e.a149d",
+        "id": "58f50689.181728",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Arguments for the WGET command to get the selected version",
         "func": "\nvar selected = RED.util.cloneMessage(flow.get('Update_Selected'));\nvar updates = {};\nupdates.payload = RED.util.cloneMessage(flow.get('Updates'));\n\nvar index = updates.payload.findIndex(x => x.Version === selected);\n\nmsg.payload = \"-O \" + selected + ' ' + updates.payload[index].URL_Download;\n\nreturn msg;",
         "outputs": 1,
@@ -19844,18 +19842,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 1050,
         "y": 400,
         "wires": [
             [
-                "e1237f39.34bf"
+                "84af8319.7efe3"
             ]
         ]
     },
     {
-        "id": "e1237f39.34bf",
+        "id": "84af8319.7efe3",
         "type": "exec",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "command": "wget",
         "addpay": "payload",
         "append": "",
@@ -19863,20 +19861,20 @@
         "timer": "",
         "oldrc": false,
         "name": "Fetch selected version",
-        "x": 420,
+        "x": 440,
         "y": 500,
         "wires": [
             [],
             [],
             [
-                "10a953b7.57c2ac"
+                "e4b5ac71.f9da2"
             ]
         ]
     },
     {
-        "id": "10a953b7.57c2ac",
+        "id": "e4b5ac71.f9da2",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Unzip command arguments",
         "func": "msg.payload = \"-o \" + RED.util.cloneMessage(flow.get('Update_Selected')) + \" -d ~/Releases\";\n// Arguments for the unzip command\n\nreturn msg;",
         "outputs": 1,
@@ -19884,18 +19882,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 460,
         "y": 580,
         "wires": [
             [
-                "835aeae6.1e2268"
+                "fa9ece0.583d13"
             ]
         ]
     },
     {
-        "id": "835aeae6.1e2268",
+        "id": "fa9ece0.583d13",
         "type": "exec",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "command": "unzip",
         "addpay": "payload",
         "append": "",
@@ -19903,20 +19901,20 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 650,
+        "x": 670,
         "y": 580,
         "wires": [
             [
-                "73ec47c0.cb8248"
+                "e9cbf405.c5b648"
             ],
             [],
             []
         ]
     },
     {
-        "id": "73ec47c0.cb8248",
+        "id": "e9cbf405.c5b648",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Bakcup current flow (in case) and copy the new version",
         "func": "msg.payload = msg.payload.split(\"inflating: \");     // Get path of .json flow\nmsg.payload[1] = msg.payload[1].replace(/\\s/g, ''); // Remove whitespaces\n\nvar backup = {};\nbackup.payload = \"./backup.sh\" // Command to execute for the backup (run a script on the rpi)\n\nvar update = {};\nupdate.payload = \"-f \" + msg.payload[1] + \" ~/.node-red\"; // Arguments for the CP command \n\nreturn [backup,update];",
         "outputs": 2,
@@ -19924,21 +19922,21 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
+        "x": 840,
         "y": 500,
         "wires": [
             [
-                "8cc68cf9.53eca"
+                "2dae1398.6b426c"
             ],
             [
-                "c962686c.c85758"
+                "eb6f945e.28b448"
             ]
         ]
     },
     {
-        "id": "8cc68cf9.53eca",
+        "id": "2dae1398.6b426c",
         "type": "exec",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "command": "",
         "addpay": "payload",
         "append": "",
@@ -19946,18 +19944,20 @@
         "timer": "",
         "oldrc": false,
         "name": "Backup Current flow",
-        "x": 1160,
+        "x": 1180,
         "y": 480,
         "wires": [
-            [],
+            [
+                "25e0e8e.2339618"
+            ],
             [],
             []
         ]
     },
     {
-        "id": "c962686c.c85758",
+        "id": "eb6f945e.28b448",
         "type": "delay",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "pauseType": "delay",
         "timeout": "100",
@@ -19969,18 +19969,18 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 870,
+        "x": 890,
         "y": 580,
         "wires": [
             [
-                "cc789313.ec323"
+                "67931b43.3e6c84"
             ]
         ]
     },
     {
-        "id": "cc789313.ec323",
+        "id": "67931b43.3e6c84",
         "type": "exec",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "command": "cp",
         "addpay": "payload",
         "append": "",
@@ -19988,20 +19988,20 @@
         "timer": "",
         "oldrc": false,
         "name": "Copy new version",
-        "x": 1070,
+        "x": 1090,
         "y": 580,
         "wires": [
-            [],
-            [],
             [
-                "13b078ba.2c2f47"
-            ]
+                "10daf7ff.406b08"
+            ],
+            [],
+            []
         ]
     },
     {
-        "id": "13b078ba.2c2f47",
+        "id": "10daf7ff.406b08",
         "type": "exec",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "command": "node-red-restart",
         "addpay": "",
         "append": "",
@@ -20009,7 +20009,7 @@
         "timer": "",
         "oldrc": false,
         "name": "Restart node red to apply changes",
-        "x": 1340,
+        "x": 1360,
         "y": 580,
         "wires": [
             [],
@@ -20018,9 +20018,9 @@
         ]
     },
     {
-        "id": "2f675afb.a80fc6",
+        "id": "be5c408e.16822",
         "type": "ui_template",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "group": "dc5b6f65.657e5",
         "name": "Warning",
         "order": 8,
@@ -20031,16 +20031,16 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 380,
+        "x": 400,
         "y": 640,
         "wires": [
             []
         ]
     },
     {
-        "id": "cf190be7.cd5678",
+        "id": "5c13e3e5.cdf40c",
         "type": "ui_template",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "group": "16302ec1.6c81c1",
         "name": "Changelog widget",
         "order": 1,
@@ -20051,28 +20051,28 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1450,
+        "x": 1470,
         "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "cfbac85f.ba17c8",
+        "id": "94a894ee.39e4c8",
         "type": "ui_ui_control",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Hide Changelog",
         "events": "all",
-        "x": 560,
+        "x": 580,
         "y": 700,
         "wires": [
             []
         ]
     },
     {
-        "id": "6e19f2de.06480c",
+        "id": "916c18b4.1cab68",
         "type": "inject",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "props": [
             {
@@ -20086,30 +20086,30 @@
         "topic": "",
         "payload": "{\"group\":{\"hide\":[\"UPDATE_MANAGER_Changelog\"]}}",
         "payloadType": "json",
-        "x": 370,
+        "x": 390,
         "y": 700,
         "wires": [
             [
-                "cfbac85f.ba17c8"
+                "94a894ee.39e4c8"
             ]
         ]
     },
     {
-        "id": "95731e6a.0b752",
+        "id": "764066e7.939088",
         "type": "ui_ui_control",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Show Changelog",
         "events": "all",
-        "x": 810,
+        "x": 830,
         "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "848b7f00.3f543",
+        "id": "5eac1573.a1853c",
         "type": "change",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "rules": [
             {
@@ -20125,35 +20125,35 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
+        "x": 600,
         "y": 160,
         "wires": [
             [
-                "95731e6a.0b752"
+                "764066e7.939088"
             ]
         ]
     },
     {
-        "id": "48318eb4.4b9c6",
+        "id": "5e9528ed.940908",
         "type": "catch",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "scope": [
-            "590138d7.2e84a8"
+            "5c82bcd1.f69964"
         ],
         "uncaught": false,
         "x": 730,
         "y": 40,
         "wires": [
             [
-                "ee686ce6.ab9d1"
+                "766eba60.54ba34"
             ]
         ]
     },
     {
-        "id": "d514ae33.875bb",
+        "id": "71e2a0f.471106",
         "type": "ui_toast",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -20169,9 +20169,9 @@
         "wires": []
     },
     {
-        "id": "ee686ce6.ab9d1",
+        "id": "766eba60.54ba34",
         "type": "change",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "rules": [
             {
@@ -20191,14 +20191,14 @@
         "y": 40,
         "wires": [
             [
-                "d514ae33.875bb"
+                "71e2a0f.471106"
             ]
         ]
     },
     {
-        "id": "23823c32.da4484",
+        "id": "d623014e.d1307",
         "type": "ui_dropdown",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "Select a product",
         "label": "Select a product :",
         "tooltip": "",
@@ -20234,18 +20234,18 @@
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
-        "x": 100,
+        "x": 120,
         "y": 260,
         "wires": [
             [
-                "bd56e80d.e3cff8"
+                "d2290d24.fc0af"
             ]
         ]
     },
     {
-        "id": "98041aac.4454e8",
+        "id": "966d366c.ab4d98",
         "type": "inject",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "props": [
             {
@@ -20264,18 +20264,18 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 110,
+        "x": 130,
         "y": 320,
         "wires": [
             [
-                "c4a7d321.a0f91"
+                "845c5eee.96dfc"
             ]
         ]
     },
     {
-        "id": "bd56e80d.e3cff8",
+        "id": "d2290d24.fc0af",
         "type": "function",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "func": "msg.enabled = true;\nmsg.background = \"rgb(245, 86, 10)\";\nflow.set('Product', msg.payload);\n\nreturn msg;",
         "outputs": 1,
@@ -20283,52 +20283,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
+        "x": 300,
         "y": 260,
         "wires": [
             [
-                "c4a7d321.a0f91"
+                "845c5eee.96dfc"
             ]
         ]
     },
     {
-        "id": "47400ac4.de95b4",
-        "type": "debug",
-        "z": "fc51a28d.3390f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "17dad3dc.80bd3c",
-        "type": "debug",
-        "z": "fc51a28d.3390f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 850,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "56afd80d.13a2d8",
+        "id": "4d546812.d38e28",
         "type": "inject",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "props": [
             {
@@ -20347,18 +20313,18 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 110,
+        "x": 130,
         "y": 400,
         "wires": [
             [
-                "c61f5f2a.dbacf"
+                "f20d4be7.7d26d8"
             ]
         ]
     },
     {
-        "id": "9cb8b73a.6786a8",
+        "id": "9250aa1a.c8b058",
         "type": "inject",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "name": "",
         "props": [
             {
@@ -20373,17 +20339,17 @@
         "payload": "PRODUCT_INFO.PRODUCT",
         "payloadType": "global",
         "x": 190,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
-                "19b6b7b8.ef5dc8"
+                "9870628f.512de"
             ]
         ]
     },
     {
-        "id": "19b6b7b8.ef5dc8",
+        "id": "9870628f.512de",
         "type": "ui_text",
-        "z": "fc51a28d.3390f",
+        "z": "fea8a30b.1598d",
         "group": "dc5b6f65.657e5",
         "order": 1,
         "width": 6,
@@ -20393,7 +20359,45 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "x": 470,
-        "y": 100,
+        "y": 80,
         "wires": []
+    },
+    {
+        "id": "25e0e8e.2339618",
+        "type": "function",
+        "z": "fea8a30b.1598d",
+        "name": "",
+        "func": "var vers = RED.util.cloneMessage(flow.get('Update_Selected'));\nvar remove = {};\n\nremove.payload = \"-rf \" + vers;\n\nreturn remove;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 460,
+        "wires": [
+            [
+                "588976c8.fac5d8"
+            ]
+        ]
+    },
+    {
+        "id": "588976c8.fac5d8",
+        "type": "exec",
+        "z": "fea8a30b.1598d",
+        "command": "rm",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Delete zip file",
+        "x": 1560,
+        "y": 460,
+        "wires": [
+            [],
+            [],
+            []
+        ]
     }
 ]
